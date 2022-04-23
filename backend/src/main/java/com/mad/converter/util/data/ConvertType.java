@@ -30,7 +30,7 @@ public class ConvertType {
     ConvertTypeEnum target
   ) {
     if (converterInterface == null) {
-      log.info("DataBase setting is null");
+      log.info("converterInterface setting is null");
       return null;
     } else {
       return converterInterface.fileConverter(file, src, target);
