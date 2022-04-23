@@ -1,0 +1,9 @@
+{
+  "login": {
+    "login": "로그인",
+    "email": "이메일",
+    "password": "패스워드",
+    "register": "회원가입",
+    "forgotPassword": "비밀번호를 잊으셨나요?"
+  }
+}

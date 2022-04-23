@@ -1,0 +1,27 @@
+scalar Upload
+
+enum  ConvertDivisionEnum{
+  DATA
+  FILE
+}
+
+enum  ConvertTypeEnum{
+  JSON
+  CSV
+  EXCEL
+}
+
+type Mutation{
+  dataTest(
+    data: String!
+    src: ConvertTypeEnum!
+    target: ConvertTypeEnum!
+    convertDivisionEnum: ConvertDivisionEnum!
+  ) : String!
+  fileTest(
+    file: Upload!
+    src: ConvertTypeEnum!
+    target: ConvertTypeEnum!
+    convertDivisionEnum: ConvertDivisionEnum!
+  ) : Upload!
+}
