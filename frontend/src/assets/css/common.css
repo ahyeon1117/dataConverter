@@ -104,6 +104,7 @@ h2 {
   margin-top: 50px;
   width: 80%;
 }
+
 .submit button {
   width: 100%;
   height: 50px;
@@ -118,7 +119,52 @@ h2 {
 }
 
 
+.mainArea h3{
+  padding: 5px;
+}
+
+.mainArea h3:hover{
+  padding: 5px;
+  cursor: pointer;
+}
+.selectBox {
+  border-bottom: 1px solid blue;
+  justify-content: center;
+  display: flex;
+}
+
+.mainArea textarea{
+  width: 100%;
+  height: 6.25em;
+  border: 1px solid black;
+  resize: none;
+}
+
+.mainArea {
+    position:absolute;
+    top:50%;
+    left:50%;
+    width: 700px;
+    height: 500px;
+    text-align: center;
+    border: 1px solid blue;
+    border-radius: 10px;
+    transform:translate(-50%,-50%); /* translate(x축,y축) */
+}
+
+
+
+
+
 
 .mgT16{
   margin-top: 16px;
+}
+
+.mgL16{
+  margin-left: 16px;
+}
+
+.bLBlue{
+  border-left:1px solid  blue;
 }

@@ -11,17 +11,21 @@ enum  ConvertTypeEnum{
   EXCEL
 }
 
+input DataInput{
+  src: String!
+  srcType: ConvertTypeEnum!
+  targetType: ConvertTypeEnum!
+  convertDivisionEnum: ConvertDivisionEnum!
+}
+
+input FileInput{
+  src: Upload!
+  srcType: ConvertTypeEnum!
+  targetType: ConvertTypeEnum!
+  convertDivisionEnum: ConvertDivisionEnum!
+}
+
 type Mutation{
-  dataTest(
-    data: String!
-    src: ConvertTypeEnum!
-    target: ConvertTypeEnum!
-    convertDivisionEnum: ConvertDivisionEnum!
-  ) : String!
-  fileTest(
-    file: Upload!
-    src: ConvertTypeEnum!
-    target: ConvertTypeEnum!
-    convertDivisionEnum: ConvertDivisionEnum!
-  ) : Upload!
+  dataConvert(input: DataInput!) : String!
+  fileConvert(input: FileInput!) : Upload!
 }

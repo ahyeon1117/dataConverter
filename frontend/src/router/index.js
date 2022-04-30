@@ -12,8 +12,8 @@ const routes = [
     component: Login
   },
   {
-    path: "/mainPage",
-    name: "mainPage",
+    path: "/Home",
+    name: "Home",
     component: Home
   }
 ];
@@ -25,3 +25,4 @@ const router = new VueRouter({
 });
 
 export default router;
+

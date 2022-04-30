@@ -15,7 +15,7 @@ public enum ConvertDivisionEnum {
     ConvertTypeEnum src,
     ConvertTypeEnum target
   ) {
-    return databaseSelecter(target).dataExecute(data, src, target);
+    return selecter(target).dataExecute(data, src, target);
   }
 
   public File fileAction(
@@ -23,10 +23,10 @@ public enum ConvertDivisionEnum {
     ConvertTypeEnum src,
     ConvertTypeEnum target
   ) {
-    return databaseSelecter(target).fileExecute(file, src, target);
+    return selecter(target).fileExecute(file, src, target);
   }
 
-  public ConvertType databaseSelecter(ConvertTypeEnum convertTypeEnum) {
+  public ConvertType selecter(ConvertTypeEnum convertTypeEnum) {
     ConvertType convertType = new ConvertType();
     switch (convertTypeEnum) {
       case CSV:
