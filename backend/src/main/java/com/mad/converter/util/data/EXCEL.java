@@ -5,19 +5,11 @@ import java.io.File;
 
 public class EXCEL implements ConverterInterface {
 
-  public String dataConverter(
-    String data,
-    ConvertTypeEnum src,
-    ConvertTypeEnum target
-  ) {
+  public String dataConverter(String data, ConvertTypeEnum src) {
     return data;
   }
 
-  public File fileConverter(
-    File file,
-    ConvertTypeEnum src,
-    ConvertTypeEnum target
-  ) {
+  public File fileConverter(File file, ConvertTypeEnum src) {
     return file;
   }
 }

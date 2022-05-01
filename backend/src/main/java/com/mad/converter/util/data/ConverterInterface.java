@@ -6,13 +6,11 @@ import java.io.File;
 public interface ConverterInterface {
   public String dataConverter(
     String data,
-    ConvertTypeEnum src,
-    ConvertTypeEnum target
+    ConvertTypeEnum src
   );
 
   public File fileConverter(
     File file,
-    ConvertTypeEnum src,
-    ConvertTypeEnum target
+    ConvertTypeEnum src
   );
 }

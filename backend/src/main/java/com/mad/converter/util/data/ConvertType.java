@@ -11,29 +11,21 @@ public class ConvertType {
 
   private ConverterInterface converterInterface;
 
-  public String dataExecute(
-    String data,
-    ConvertTypeEnum src,
-    ConvertTypeEnum target
-  ) {
+  public String dataExecute(String data, ConvertTypeEnum src) {
     if (converterInterface == null) {
       log.info("converterInterface setting is null");
       return null;
     } else {
-      return converterInterface.dataConverter(data, src, target);
+      return converterInterface.dataConverter(data, src);
     }
   }
 
-  public File fileExecute(
-    File file,
-    ConvertTypeEnum src,
-    ConvertTypeEnum target
-  ) {
+  public File fileExecute(File file, ConvertTypeEnum src) {
     if (converterInterface == null) {
       log.info("converterInterface setting is null");
       return null;
     } else {
-      return converterInterface.fileConverter(file, src, target);
+      return converterInterface.fileConverter(file, src);
     }
   }
 }
