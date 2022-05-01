@@ -15,7 +15,7 @@ public enum ConvertDivisionEnum {
     ConvertTypeEnum src,
     ConvertTypeEnum target
   ) {
-    return selecter(target).dataExecute(data, src, target);
+    return selecter(target).dataExecute(data, src);
   }
 
   public File fileAction(
@@ -23,7 +23,7 @@ public enum ConvertDivisionEnum {
     ConvertTypeEnum src,
     ConvertTypeEnum target
   ) {
-    return selecter(target).fileExecute(file, src, target);
+    return selecter(target).fileExecute(file, src);
   }
 
   public ConvertType selecter(ConvertTypeEnum convertTypeEnum) {
