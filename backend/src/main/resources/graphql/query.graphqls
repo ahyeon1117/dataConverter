@@ -1,3 +1,5 @@
 type Query{
   test: String
+  dataType(param:ConvertDivisionEnum): [String]
+  
 }

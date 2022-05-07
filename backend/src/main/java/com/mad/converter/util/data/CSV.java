@@ -12,4 +12,10 @@ public class CSV implements ConverterInterface {
   public File fileConverter(File file, ConvertTypeEnum src) {
     return file;
   }
+
+  public String jsonDataToCsv(String data) {
+    String result = "";
+
+    return result;
+  }
 }
