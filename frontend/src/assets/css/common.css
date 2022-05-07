@@ -118,7 +118,6 @@ h2 {
   cursor:pointer
 }
 
-
 .mainArea h3{
   padding: 5px;
 }
@@ -135,7 +134,7 @@ h2 {
 
 .mainArea textarea{
   width: 100%;
-  height: 6.25em;
+  height: 20em;
   border: 1px solid black;
   resize: none;
 }
@@ -152,11 +151,9 @@ h2 {
     transform:translate(-50%,-50%); /* translate(x축,y축) */
 }
 
-
-
-
-
-
+.mgB16{
+  margin-bottom: 16px;
+}
 .mgT16{
   margin-top: 16px;
 }
@@ -167,4 +164,73 @@ h2 {
 
 .bLBlue{
   border-left:1px solid  blue;
+}
+
+.layout {
+  height: 750px;
+  width: 100%;
+}
+.primaryBackground{
+  background-color: #3f98d2;
+  color: white;
+}
+.secondaryBackground{
+  background-color: black;
+  color: white;
+}
+.layoutArea {
+  width: 50%;
+  margin: 0 auto;
+  height: 80%;
+  transform: translateY(30%);
+  text-align: center;
+}
+.layoutArea textarea{
+  width: 100%;
+  height: 20em;
+  border: none;
+  resize: none;
+  outline: none;
+}
+
+.df{
+  display: flex;
+}
+.layoutSubArea{
+  align-items: center;
+}
+
+.fwb{
+  font-weight: bold;
+}
+.layoutSubArea div{ 
+  padding: 10px;
+}
+.layoutArea button{
+  cursor:pointer;
+  width: 30%;
+  border-radius: 10px;
+}
+.submit {
+  cursor:pointer;
+  height: 30px;
+  width: 30%;
+  border-radius: 10px;
+  background-color: #ffffff;
+  border:none;
+  font-weight: bold;
+}
+
+
+.submit:hover
+{
+  background-color: white;
+  cursor:pointer;
+  height: 30px;
+  width: 30%;
+  outline: none;
+  border-radius: 10px;
+  border: 2px solid rgb(70, 70, 239);
+  transition: all 0.3s ease;
+  font-weight: bold;
 }

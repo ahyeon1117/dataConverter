@@ -1,33 +1,36 @@
 <template>
-  <div class="mainArea">
-    <div class="selectBox">
-      <h3 @click="dataFlagOn">DATA</h3>
-      <h3 class="bLBlue" @click="fileFlagOn">FILE</h3>
-    </div>
-    <div class="mgT16">
-      <div>Type</div>
-      <select name="" id="">
-        <option v-for="(item, index) in dataType" :key="index">
-          {{ item }}
-        </option>
-      </select>
-    </div>
-    <div class="mgT16">
-      <div>Target Type</div>
-      <select name="" id="">
-        <option v-for="(item, index) in dataType" :key="index">
-          {{ item }}
-        </option>
-      </select>
-    </div>
-    <div class="mgT16">
-      <div v-if="dataFlag">
-        <div>data</div>
-        <textarea />
+  <div>
+    <div class="layout primaryBackground">
+      <div class="layoutArea">
+        <h1 style="text-align: start" class="mgB16">INPUT</h1>
+        <div class="layoutSubArea df">
+          <textarea></textarea>
+          <div class="fwb">
+            <div>
+              SrcType
+              <select v-model="selectSrcType">
+                <option value="EXCEL">EXCEL</option>
+              </select>
+            </div>
+            <div>
+              TargetType
+              <select v-model="selectTargetType">
+                <option value="EXCEL">EXCEL</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="mgT16">
+          <button class="submit" @click="process">PROCESS</button>
+        </div>
       </div>
-      <div v-if="fileFlag">
-        <div>file</div>
-        <input type="file" />
+    </div>
+    <div v-if="flag" class="layout secondaryBackground">
+      <div class="layoutArea">
+        <label>Result</label>
+        <div class="layoutSubArea df">
+          <textarea></textarea>
+        </div>
       </div>
     </div>
   </div>
@@ -37,19 +40,14 @@ export default {
   name: "InputTable",
   data() {
     return {
-      dataType: ["CSV", "JSON"],
-      fileFlag: false,
-      dataFlag: true
+      selectSrcType: null,
+      selectTargetType: null,
+      flag: false
     };
   },
   methods: {
-    fileFlagOn() {
-      this.dataFlag = false;
-      this.fileFlag = true;
-    },
-    dataFlagOn() {
-      this.dataFlag = true;
-      this.fileFlag = false;
+    process() {
+      this.flag = true;
     }
   }
 };
